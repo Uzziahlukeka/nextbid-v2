@@ -50,6 +50,28 @@ there were the requirements and we tried to solve it
 for the api to work properly , the main folder must have Qwerty as name and inside this folder opern another one named : nextbid-auction-website-main where you can deploy all files and run it properly 
 
 
+## some images 
+login part
+![image](https://github.com/Uzziahlukeka/MVC-and-Rest-try/assets/102746022/246920bc-d1e3-49ea-8fe6-03ae7b4ef5ea)
+
+main part 
+![image](https://github.com/Uzziahlukeka/MVC-and-Rest-try/assets/102746022/85791c00-b9c5-4748-87f5-9aef95e78302)
+![image](https://github.com/Uzziahlukeka/MVC-and-Rest-try/assets/102746022/389e909a-8a24-4154-8535-004fc71f06ab)
+![image](https://github.com/Uzziahlukeka/MVC-and-Rest-try/assets/102746022/08f26908-a957-408e-bc13-d54cee7dbf62)
+
+adding item part 
+![image](https://github.com/Uzziahlukeka/MVC-and-Rest-try/assets/102746022/eb609ad0-2ca7-418c-842b-a4bd5ce74f58)
+
+contact part
+![image](https://github.com/Uzziahlukeka/MVC-and-Rest-try/assets/102746022/6876526c-4b9d-4d2e-b2ec-5c522fa00fa4)
+
+
+
+
+
+
+
+
 
 
 # THE_U
