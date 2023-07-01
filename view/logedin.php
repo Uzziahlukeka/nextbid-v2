@@ -1,5 +1,7 @@
 <?php
+session_start();
 require_once '../controller/user/read.php';
+$name=$_SESSION['data'];
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +51,6 @@ require_once '../controller/user/read.php';
         <input type="text" class="search__input" placeholder="Search here">
       </div>
       <a href="cart.php"><img src="/icons/shopping.svg" alt=""></a>
-      <a href="user-profile.html"><img class="user-profile-icon" src="/icons/user-circle.svg" alt=""></a>
     </div>
     <div class="navbar-icons">            
         <a href="/user/show.php?name=<?php echo $name ; ?>"><img class="user-profile-icon" src="/icons/user-circle.svg" alt=""></a>

@@ -1,6 +1,7 @@
 <?php
-include_once '../nextbid-auction-website-main/config/Database.php';
-include_once '../nextbid-auction-website-main/models/Registration.php';
+session_start();
+include_once '../../config/Database.php';
+include_once '../../models/Registration.php';
 
 $database=new Database();
 $con=$database->connect();
@@ -12,7 +13,9 @@ if (filter_has_var(INPUT_POST, "sign")) {
     $passw = filter_input(INPUT_POST, "password");
 
     if($user->login($email,$passw)==true){
-        header("location:logedin.php");
+        $data=$user->name;
+        $_SESSION['data']=$data;
+        header("location:../../view/logedin.php");
         exit();
     }else{
         echo"error";

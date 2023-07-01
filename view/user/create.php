@@ -17,7 +17,7 @@ if (isset($_GET['name'])) {
 <h1>WELCOME</h1>
 
 <p> created successfully.
-    <p>click on <a href="../logedin.php">auction</a> to continue</p>
+    <p>click on <a href="../login.php">login</a> to continue</p>
     <p>go to your profil <a href="../../view/user/show.php?name=<?php echo $data ; ?>"> go on </a></p>
     
 </p>
