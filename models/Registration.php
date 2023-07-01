@@ -18,22 +18,24 @@ class Registration{
 
     public function login(string $email,string $password)
     {
-        $this->email=$email;
-        $this->passw=$password;
-
-        $pv = "SELECT password FROM registration WHERE email = :email";
+        $this->email = $email;
+        $this->passw = $password;
+    
+        $pv = "SELECT password, name FROM registration WHERE email = :email";
         $stmt1 = $this->con->prepare($pv);
         $stmt1->bindParam(':email', $email);
         $stmt1->execute();
-        $storedPassword = $stmt1->fetchColumn();
+        $result = $stmt1->fetch(PDO::FETCH_ASSOC);
     
-        if ($storedPassword !== false) {
+        if ($result !== false) {
+            $storedPassword = $result['password'];
             $verif = password_verify($this->passw, $storedPassword);
+    
             if ($verif === true) {
-               return true ;
-            }
-            else{
-                echo "somethinig went wrong";
+                $this->name=$result['name'];
+                return true;
+            } else {
+                echo "Something went wrong";
             }
         }
     }

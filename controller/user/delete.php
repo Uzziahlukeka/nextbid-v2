@@ -34,5 +34,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
     } 
 
-    header("Location: ../../view/create/delete.php");
+    header("Location: ../../view/user/delete.php");
 }

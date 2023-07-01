@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['data'])){
+    unset($_SESSION['session']);
+}
+session_destroy();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
