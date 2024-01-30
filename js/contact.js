@@ -8,11 +8,11 @@ function sendMessage() {
   var name = nameInput.value;
   var phone = phoneInput.value;
   var message = messageInput.value;
-  var chatId = 'your id';
+  var chatId = '693372637';
 
   
 
-  var token = 'your token';
+  var token = '6127064955:AAEn6_ogIks_bGQFN0MqQxNB9YVkfhK0T1g';
   var text = `Name: ${name}%0A%0AEmail: ${email}%0A%0APhone number: ${phone}%0A%0ASubject: ${document.querySelector('input[type="text"][name="subject"]').value}%0A%0AMessage: ${message}`;
 
   var url = `https://api.telegram.org/bot${token}/sendMessage`;

@@ -1,4 +1,5 @@
 <?php
+session_start();
 $data = [
     'name' => filter_input(INPUT_POST, "name",),
     'email' => filter_input(INPUT_POST, "email"),
@@ -42,4 +43,6 @@ if ($status_code !== 200) {
     exit;
 }
 
-header("Location: ../../view/user/create.php?name=". urlencode($data['name']));
+$_SESSION['data']=$data['name'];
+
+header("Location: ../../create?name=". urlencode($data['name']));

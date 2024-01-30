@@ -1,6 +1,6 @@
 <?php
   // forget 
-include_once '../nextbid-auction-website-main/config/Database.php';
+include_once '../../config/Database.php';
 $database=new Database();
 $con=$database->connect();
 

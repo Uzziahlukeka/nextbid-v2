@@ -29,4 +29,4 @@ if ($status_code !== 200) {
     var_dump($datas);    
     exit;
 }
-header("Location: ../../view/user/update.php?name=". urlencode($data['name']));
+header("Location: ../../update?name=". urlencode($data['name']));

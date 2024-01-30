@@ -84,6 +84,6 @@ if ($status_code !== 200) {
 }
 
 
-header("Location: ../../view/item/upload.php?item_name=" . urlencode($data['item_name']));
+header("Location: ../../upload?item_name=" . urlencode($data['item_name']));
 exit();
 

@@ -1,7 +1,8 @@
 <?php
 session_start();
-require_once '../controller/user/read.php';
+require_once 'controller/user/read.php';
 $name = isset($_SESSION['data']) ? $_SESSION['data'] : null;
+
 
 ?>
 
@@ -36,13 +37,13 @@ $name = isset($_SESSION['data']) ? $_SESSION['data'] : null;
   <!-- ....................................Here starts navbar........................................ -->
 
   <section id="header"> 
-    <a href="main.html"><img class="image" src="/icons/Nextbid.svg" alt=""></a>
+    <a href="/main"><img class="image" src="/icons/Nextbid.svg" alt=""></a>
     <div class="navbar-links">
       <ul class="navbar">
-        <li><a class="active" href="logrdin.php">Home</a></li>
+        <li><a class="active" href="/main">Home</a></li>
         <li><a href="/view/about.html">About</a></li>
         <li><a href="/view/contact.html">Contact</a></li>
-        <li><a href="/view/item/add_product.php">Add Product</a></li>
+        <li><a href="/new item">Add Product</a></li>
 
 
       </ul>
@@ -52,10 +53,10 @@ $name = isset($_SESSION['data']) ? $_SESSION['data'] : null;
         <input type="text" class="search__input" placeholder="Search here">
       </div>
       <a href="cart.php"><img src="/icons/shopping.svg" alt=""></a>
-      <a href="/index.php"> log out </a>
+      <a href="/"> log out </a>
     </div>
     <div class="navbar-icons">            
-        <a href="/view/user/show.php?name=<?php echo $name ; ?>"><img class="user-profile-icon" src="/icons/user-circle.svg" alt=""></a>
+        <a href="/show?name=<?php echo $name ; ?>"><img class="user-profile-icon" src="/icons/user-circle.svg" alt=""></a>
         </div>
     
 
@@ -64,10 +65,10 @@ $name = isset($_SESSION['data']) ? $_SESSION['data'] : null;
     </div>
   
     <div class="dropdown-menu">
-      <li><a class="active" href="mainx.html">Home</a></li>
+      <li><a class="active" href="/main">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="add_product.php">Add Product</a></li>
+      <li><a href="new item">Add Product</a></li>
     </div>
   </section> 
 
@@ -200,7 +201,7 @@ $name = isset($_SESSION['data']) ? $_SESSION['data'] : null;
       <div class="card auction-card">
       
         <div class="auction-card-img">
-          <a href="/view/item/Ishow.php?item_name=<?php echo $row['item_name']?>"><img src="/images/<?php echo $row['item_photo']?>" alt="Product Image" width="300" height="300" style="background-color: #d4f8f4; "></a>
+          <a href="/show item?item_name=<?php echo $row['item_name']?>"><img src="/images/<?php echo $row['item_photo']?>" alt="Product Image" width="300" height="300" style="background-color: #d4f8f4; "></a>
         </div>
         <div class="card-details">
           <div class="like-icon-num">

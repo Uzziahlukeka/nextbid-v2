@@ -1,5 +1,5 @@
 <?php 
-require_once '../../controller/user/edit.php';
+require_once 'controller/user/edit.php';
 
 ?>
 
@@ -7,7 +7,7 @@ require_once '../../controller/user/edit.php';
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Example REST API Client</title>
+    <title>Edit Client</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css">
 </head>
 <body>

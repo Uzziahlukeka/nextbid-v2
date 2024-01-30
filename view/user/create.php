@@ -7,7 +7,7 @@ if (isset($_GET['name'])) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Example REST API Client</title>
+    <title>Create user</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css">
 </head>
 <body>
@@ -17,8 +17,8 @@ if (isset($_GET['name'])) {
 <h1>WELCOME</h1>
 
 <p> created successfully.
-    <p>click on <a href="../login.php">login</a> to continue</p>
-    <p>go to your profil <a href="../../view/user/show.php?name=<?php echo $data ; ?>"> go on </a></p>
+    <p>click on <a href="/main">login</a> to continue</p>
+    <p>go to your profil <a href="/show?name=<?php echo $data ; ?>"> go on </a></p>
     
 </p>
 

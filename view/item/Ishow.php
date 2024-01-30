@@ -1,6 +1,6 @@
 <?php
-session_start();
-require_once "../../controller/item/show.php";
+//session_start();
+require_once "controller/item/show.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +31,7 @@ require_once "../../controller/item/show.php";
         <div class="wrapper cards">
             <!-- ............................................................................ -->
             <div class="back-button">
-                <a href="../logedin.php"><i class="fa-solid fa-arrow-left fa-lg" style="color: #3b3b3b;"></i>  Back</a>
+                <a href="/main"><i class="fa-solid fa-arrow-left fa-lg" style="color: #3b3b3b;"></i>  Back</a>
             </div>
             <div class="card auction-card">
                 <div class="auction-card-img">
@@ -103,6 +103,3 @@ require_once "../../controller/item/show.php";
 
 </body>
 </html>
-<?php
-var_dump($_SESSION['bid']);
-?>

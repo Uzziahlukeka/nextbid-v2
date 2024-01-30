@@ -33,5 +33,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         var_dump($data);    
     exit;
     } 
-    header('location:../../view/item/idelete.php');
+    header('location:../../delete item');
 }

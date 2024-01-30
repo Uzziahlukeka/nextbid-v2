@@ -18,7 +18,7 @@ if (filter_has_var(INPUT_POST, "sign")) {
         //var_dump($user->name);
         $_SESSION['data']=$data;
         //var_dump(urlencode($data));
-       header("location:../../view/logedin.php");
+       header("location:../../main");
         exit();
     }else{
         echo"error";

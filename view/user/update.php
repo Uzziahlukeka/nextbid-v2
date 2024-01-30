@@ -7,7 +7,7 @@ if (isset($_GET['name'])) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Example REST API Client</title>
+    <title>update Client</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css">
 </head>
 <body>
@@ -18,10 +18,10 @@ if (isset($_GET['name'])) {
 
 <p>Repository updated successfully.
 <p>votre profil
- <a href="/view/user/show.php?name=<?php echo $data?>">Show</a>
+ <a href="/show?name=<?php echo $data?>">Show</a>
  </p>
 </p>
- <p>click on <a href="/logedin.php">auction</a> to continue</p>
+ <p>click on <a href="/main">auction</a> to continue</p>
  </main>
 </body>
 </html>

@@ -32,7 +32,7 @@ require_once '../../controller/item/update.php';
             <!-- ............................................................................ -->
             <form method="post" action="../../controller/item/ioupdate.php"  >
             <div class="back-button">
-                <a href="/logedin.php"><i class="fa-solid fa-arrow-left fa-lg" style="color: #3b3b3b;"></i>  Back</a>
+                <a href="/main"><i class="fa-solid fa-arrow-left fa-lg" style="color: #3b3b3b;"></i>  Back</a>
             </div>
             <div class="card auction-card">
                 <div class="auction-card-img">

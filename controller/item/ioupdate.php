@@ -31,5 +31,5 @@ if ($status_code !== 200) {
     exit;
 }
 
-header("Location: ../../view/item/ioupdate.php?item_name=" . urlencode($data['item_name']));
+header("Location: ../../edit item?item_name=" . urlencode($data['item_name']));
 exit();

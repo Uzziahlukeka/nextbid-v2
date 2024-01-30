@@ -25,13 +25,13 @@
 
 
     <section id="header">
-        <a href="../logedin.php"><img class="image" src="../icons/Nextbid.svg" alt=""></a>
+        <a href="/main"><img class="image" src="../icons/Nextbid.svg" alt=""></a>
         <div class="navbar-links">
             <ul class="navbar">
-                <li><a href="/view/logedin.php">Home</a></li>
+                <li><a href="/main">Home</a></li>
                 <li><a href="/view/about.html">About</a></li>
                 <li><a href="/view/contact.html">Contact</a></li>
-                <li><a class="active" href="add_product.php">Add Product</a></li>
+                <li><a class="active" href="new item">Add Product</a></li>
             </ul>
         </div>
         <div class="navbar-icons">
