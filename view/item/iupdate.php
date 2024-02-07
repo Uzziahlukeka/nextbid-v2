@@ -1,5 +1,5 @@
 <?php
-require_once '../../controller/item/update.php';
+require_once 'controller/item/update.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

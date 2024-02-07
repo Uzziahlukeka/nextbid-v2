@@ -152,6 +152,19 @@ class Registration{
 
     //update
     public function update(){
+
+        $query_check_owner = 'SELECT id FROM '.$this->table.' WHERE id=:id AND email=:email';
+        $stmt_check_owner = $this->con->prepare($query_check_owner);
+        $stmt_check_owner->bindParam(':id', $this->id);
+        $stmt_check_owner->bindParam(':email', $this->email);
+        $stmt_check_owner->execute();
+        $num = $stmt_check_owner->rowCount();
+    
+        if ($num === 0) {
+            echo "You are not authorized to update this post.";
+            return false;
+        }
+
         //create query
         $query='UPDATE '.$this->table.'
         SET
