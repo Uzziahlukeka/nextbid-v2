@@ -120,6 +120,73 @@
     font-weight: 600;
 }
 
+.input-field {
+    width: calc(100% - 22px); /* Adjust the width as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555; /* Adjust the color as needed */
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.one-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.description input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.description input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+
+.edit-button,
+.auction-button,
+.delete-button {
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Set width to 100% to occupy the entire space */
+    margin-bottom: 10px; /* Add some bottom margin for spacing */
+}
+
+.edit-button {
+    background-color: #28a745; /* Green */
+}
+
+.auction-button {
+    background-color: #007bff; /* Blue */
+}
+
+.delete-button {
+    background-color: #dc3545; /* Red */
+}
+
+
 .product-prices {
     margin-top: 10px;
 }

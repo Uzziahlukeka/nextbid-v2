@@ -1,0 +1,15 @@
+{
+    "name": "acer/nextbid-auction-website-main",
+    "autoload": {
+        "psr-4": {
+            "": "controller/"
+        }
+    },
+    "authors": [
+        {
+            "name": "uzziah lukeka",
+            "email": "uzziahlukeka@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,4 +1,5 @@
 <?php 
+namespace uzh;
 if (isset($_GET['name'])) {
     $data = urldecode($_GET['name']);
   }

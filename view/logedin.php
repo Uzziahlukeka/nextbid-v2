@@ -1,5 +1,6 @@
 <?php
-session_start();
+
+
 require_once 'controller/user/read.php';
 $name = isset($_SESSION['data']) ? $_SESSION['data'] : null;
 
@@ -41,8 +42,8 @@ $name = isset($_SESSION['data']) ? $_SESSION['data'] : null;
     <div class="navbar-links">
       <ul class="navbar">
         <li><a class="active" href="/main">Home</a></li>
-        <li><a href="/view/about.html">About</a></li>
-        <li><a href="/view/contact.html">Contact</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="contact">Contact</a></li>
         <li><a href="/new item">Add Product</a></li>
 
 
@@ -53,7 +54,7 @@ $name = isset($_SESSION['data']) ? $_SESSION['data'] : null;
         <input type="text" class="search__input" placeholder="Search here">
       </div>
       <a href="cart.php"><img src="/icons/shopping.svg" alt=""></a>
-      <a href="/"> log out </a>
+      <a href="/"<?php session_destroy(); ?>> log out </a>
     </div>
     <div class="navbar-icons">            
         <a href="/show?name=<?php echo $name ; ?>"><img class="user-profile-icon" src="/icons/user-circle.svg" alt=""></a>
@@ -192,7 +193,10 @@ $name = isset($_SESSION['data']) ? $_SESSION['data'] : null;
   <div class="search__results"></div>
 
   <?php 
-            foreach($data['data'] as $row){
+    if (empty($data['data'])) {
+      echo "<div class='centered-message'>Nothing has been posted yet</div>";
+      } else {
+  foreach($data['data'] as $row) {
             ?>
 
   <section class="card-content">
@@ -227,7 +231,8 @@ $name = isset($_SESSION['data']) ? $_SESSION['data'] : null;
       </div>
     </div>
   </section>
-<?php } 
+<?php }
+ } 
 ?>
 
   <!-- ....................................Here starts intro section........................................ -->

@@ -60,6 +60,14 @@ body {
 /*****************************Here starts Navbar************************************/
 /*************************************************************************************/
 
+.centered-message {
+  text-align: center;
+  margin-top: 50px; /* Adjust the margin-top as needed */
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #333; /* Adjust the color as needed */
+}
+
+
 #header {
   height: 78px;
   padding: 14px 80px;

@@ -74,20 +74,25 @@ require_once "controller/item/show.php";
                                 <button onclick="bid(this.closest('.auction-card'))">Bid now</button>
                            </form>
 
-                           <form method="post" action="payment.php">
+                           <form method="post" action="/controller/item/payment.php">
                             <input type=hidden value="<?php echo isset($_SESSION['bid']) ?>" name='bidd'>
                             <button type="submit" name='pay'>Pay</button>
                            </form>
                         </div>
                         
                     <p class="card-text-last card-text">Ends in:<span id="timer" class="countdown-timer"></span></p>
-                    <form method="post" action="/controller/item/delete.php"  class="card-bid">
+                    <form method="post" action="/controller/item/delete.php" ">
+                    <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="item_name" value="<?= $data["item_name"] ?>">
-                    <button>Delete</button>
+                    <button class="delete-button">Delete</button>
                     </form>
-                    <form method="post" action="/view/item/iupdate.php?item_name=<?= $data["item_name"] ?>" class="card-bid">
-                    <input type="hidden" name="item_name" value="<?= $data["item_name"] ?>">
-                    <button>edit</button>
+
+                    <!-- <a href="update item?item_name=<?= $data["item_name"] ?> " class="card-text"><button class="edit-button">Edit</button></a> -->
+
+                    <form method="get" action="update item" class="edit-button">
+                    <!-- <input type="hidden" name="_method" value="PUT"> -->
+                    <input type="hidden" name="item_name" value="<?php echo $data["item_name"] ; ?>">
+                    <button class="edit-button">edit</button>
                     </form>
               <!--<a href="iupdate.php?item_name=<?= $data["item_name"] ?>">Edit</a>--> 
                 </div>

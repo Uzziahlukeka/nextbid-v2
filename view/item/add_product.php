@@ -29,8 +29,8 @@
         <div class="navbar-links">
             <ul class="navbar">
                 <li><a href="/main">Home</a></li>
-                <li><a href="/view/about.html">About</a></li>
-                <li><a href="/view/contact.html">Contact</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
                 <li><a class="active" href="new item">Add Product</a></li>
             </ul>
         </div>

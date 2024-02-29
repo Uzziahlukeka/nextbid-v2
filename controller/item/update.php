@@ -1,7 +1,7 @@
 <?php
-$name = $_GET['item_name'];
+$name = isset($_GET['item_name']) ? urldecode($_GET['item_name']) : null;
 
-$apiUrl = "http://localhost/Qwerty/nextbid-auction-website-main/api/items/read_single.php?item_name=".$name;
+$apiUrl = "http://localhost/Qwerty/nextbid-auction-website-main/api/items/read_single.php?item_name=".urlencode($name);
 
 $ch = curl_init();
 

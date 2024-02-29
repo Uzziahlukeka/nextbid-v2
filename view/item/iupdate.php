@@ -59,25 +59,25 @@ require_once 'controller/item/update.php';
                     <!-- Description -->
                     <div class="description">
                         <label class="one-label" for="description">Description</label>
-                        <input type="text" name="item_description" value="<?php  echo $datas['item_description']?>">
+                        <input type="text" name="item_description" value="<?php  echo $datas['item_description']?>" class="input-field">
                     </p>
                     </div>
                     <div class="current-price-p">
                         <div class="stroke"></div>
                         <p class="card-text card-text-2">Your bid: <span class="current-price current-bid">$0</span></p>
                         <p class="card-text">Last bid: <span class="current-price last-bid"></span></p>
-                            <input type="text" name="item_price" value="<?php echo $datas['item_price']?>">
+                            <input type="text" name="item_price" value="<?php echo $datas['item_price']?>" class="input-field">
                     </div>
                     <p class="card-text-last card-text-1">Ends in: <span
                             class="closing-time">2023-04-11T08:00:00Z</span></p>
-                    <div class="card-bid">
+                    <!-- <div class="card-bid">
                         <input type="number" class="bid-input" placeholder="Offer a price">
                         <button onclick="bid(this.closest('.auction-card'))">Bid now</button>
-                    </div>
+                    </div> -->
                     <p class="card-text-last card-text">Ends in:<span id="timer" class="countdown-timer"></span></p> 
                 </div>
             </div>
-            <button type="submit" >submit</button>
+            <button type="submit" class="auction-button">submit</button>
             </form>
         </div>
     </section>

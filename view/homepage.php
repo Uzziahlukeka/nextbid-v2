@@ -1,11 +1,10 @@
 <?php
-session_start();
+
+//require_once './vendor/autoload.php';
+
 if (isset($_SESSION['data'])){
     unset($_SESSION['session']);
 }
-session_destroy();
-
-
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +18,8 @@ session_destroy();
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="/styles/login.css">
-    <title>Document</title>
+    <link rel="icon" href="/icons/Main Logo.svg">
+    <title>WELCOME to NextBid</title>
 </head>
 
 <body>
@@ -37,6 +37,9 @@ session_destroy();
                     <a class="reset-psw" href="#" id="forgot-password-link">Forgot password?</a>
                 </div>
 
+                <label class="checkbox-label" for="remember">Remember Me</label>
+                <input type="checkbox" name="remember" id="remember">
+
                 <button type="submit" class="btn" name="sign">Sign In</button>
                 <?php if (isset($errorMessage)): ?>
                 <p><?php echo $errorMessage; ?></p>
@@ -51,7 +54,10 @@ session_destroy();
                     <button class="login-method-btn" type="button"><img src="icons/logos_google-icon.svg" alt="">Google</button>
                     <button class="login-method-btn" type="button"><img src="icons/logos_facebook.svg" alt="">Facebook</button>
                 </div>
+
+                
             </form>
+            
             <br>
             <div class="switch-button">
                 <p>If you don't have an account &nbsp;</p>
