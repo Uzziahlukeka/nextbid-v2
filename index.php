@@ -1,15 +1,5 @@
 <?php
 session_start();
-
-// Check if session data is set and redirect if necessary
-// if(isset($_SESSION['data'])){
-//     // Ensure 'main' page is not the same as the current page to avoid a loop
-//     if($_SERVER['REQUEST_URI'] !== '/main'){
-//         header('Location: /main');
-//         exit;
-//     }
-// }
-
 // Include the Router class
 require_once 'controller/Router/Router.php';
 

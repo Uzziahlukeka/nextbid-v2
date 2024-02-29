@@ -1,6 +1,7 @@
 <?php
 require_once "controller/Middleware/Auth.php";
 require_once "controller/Middleware/Guest.php";
+require_once "controller/Middleware/Middleware.php";
 
 class Router{
 
@@ -58,12 +59,7 @@ class Router{
 
                 //middleware 
 
-                if($route['middleware']=== 'guest'){
-                    (new Guest)->handle();
-                }
-                elseif($route['middleware']=== 'auth'){
-                    (new Auth)->handle();
-                }
+                Middleware::resolve($route['middleware']);
 
                 require $route['controller'];
 
