@@ -1,6 +1,5 @@
-<?php
-$name = $_GET['name'];
-
+<?php   
+    $name = $_GET['name'];
 $apiUrl = "http://localhost/Qwerty/nextbid-auction-website-main/api/user/read_single.php?name=".urlencode($name);
 
 $ch = curl_init();

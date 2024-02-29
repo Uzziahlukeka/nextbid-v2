@@ -35,7 +35,7 @@
             </ul>
         </div>
         <div class="navbar-icons">
-            <a href="/cart.php"><img class="user-profile-icon" src="/icons/user-circle.svg" alt=""></a>
+            <a href="main"><img class="user-profile-icon" src="/icons/user-circle.svg" alt=""></a>
         </div>
         <div class="toggle-btn">
             <i class="fa-solid fa-bars fa-lg"></i>

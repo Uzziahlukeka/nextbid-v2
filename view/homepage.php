@@ -2,9 +2,9 @@
 
 //require_once './vendor/autoload.php';
 
-if (isset($_SESSION['data'])){
-    unset($_SESSION['session']);
-}
+// if (isset($_SESSION['data'])){
+//     unset($_SESSION['session']);
+// }
 ?>
 
 <!DOCTYPE html>
@@ -101,7 +101,7 @@ if (isset($_SESSION['data'])){
             </form>
         </div>
         <div class="guest">
-            <a href="/view/guest.html"><p>Continue as a Guest</p></a>
+            <a href="/guest"><p>Continue as a Guest</p></a>
         </div>
  </header>
     <script src="/js/login.js"></script>

@@ -1,8 +1,7 @@
 <?php
-
-
 require_once 'controller/user/read.php';
 $name = isset($_SESSION['data']) ? $_SESSION['data'] : null;
+$name = $_SESSION['data'];
 
 
 ?>
@@ -54,7 +53,7 @@ $name = isset($_SESSION['data']) ? $_SESSION['data'] : null;
         <input type="text" class="search__input" placeholder="Search here">
       </div>
       <a href="cart.php"><img src="/icons/shopping.svg" alt=""></a>
-      <a href="/"<?php session_destroy(); ?>> log out </a>
+      <a href="log out"> log out </a>
     </div>
     <div class="navbar-icons">            
         <a href="/show?name=<?php echo $name ; ?>"><img class="user-profile-icon" src="/icons/user-circle.svg" alt=""></a>
@@ -67,8 +66,8 @@ $name = isset($_SESSION['data']) ? $_SESSION['data'] : null;
   
     <div class="dropdown-menu">
       <li><a class="active" href="/main">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="contact">Contact</a></li>
       <li><a href="new item">Add Product</a></li>
     </div>
   </section> 

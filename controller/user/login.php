@@ -29,12 +29,12 @@ if (filter_has_var(INPUT_POST, "sign")) {
         $_SESSION['last_login_email'] = $email;
         $_SESSION['last_login_time'] = time(); // Update last login time
 
-        session_regenerate_id(true);
+        //session_regenerate_id(true);
 
         // Set "Remember Me" cookie if checked
         if ($remember) {
-            setcookie('remember_email', $email, time() + (60 * 60 * 24 * 30)); // 30 days expiration
-            setcookie('remember_pass', $passw, time() + (60 * 60 * 24 * 30)); // 30 days expiration
+            setcookie('remember_email', $email, time() + (60 * 60 * 24 * 5)); // 30 days expiration
+            setcookie('remember_pass', $passw, time() + (60 * 60 * 24 * 2)); // 30 days expiration
         } else {
             // If "Remember Me" checkbox is not checked, unset the cookies if they exist
             if (isset($_COOKIE['remember_email'])) {
