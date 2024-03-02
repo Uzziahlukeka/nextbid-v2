@@ -33,8 +33,9 @@ if (filter_has_var(INPUT_POST, "submit")) {
         // Display a success message to the user
         
         if($uzhh==true){
-            header("location:index.php");
-            echo "Password reset link has been sent to your email.";
+
+            echo "<script> alert ('password sent')</script>";
+            echo "<script>setTimeout(function(){ window.location.href = '../../homepage'; }, 100);</script>";
             exit();
         }
         else{

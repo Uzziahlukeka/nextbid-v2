@@ -10,7 +10,7 @@
     <main>
 
 <h1>user deleted</h1>
- <p>thank you <a href="/">log out</a> to continue</p>
+ <p>thank you <a href="log out">log out</a> to continue</p>
  </main>
 </body>
 </html>
