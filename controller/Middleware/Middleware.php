@@ -1,5 +1,9 @@
 <?php
 
+namespace middle;
+
+use Exception;
+
 class Middleware{
 
     //creating a static map for the keys
@@ -23,6 +27,10 @@ class Middleware{
 
         (new $middleware)->handle();
 
+    }
+
+    public function orin(){
+        echo " im in";
     }
 
 

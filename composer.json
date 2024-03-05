@@ -2,7 +2,7 @@
     "name": "acer/nextbid-auction-website-main",
     "autoload": {
         "psr-4": {
-            "": "controller/"
+            "middle\\": "controller/Middleware"
         }
     },
     "authors": [

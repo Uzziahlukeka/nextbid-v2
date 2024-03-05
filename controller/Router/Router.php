@@ -1,7 +1,7 @@
 <?php
-require_once "controller/Middleware/Auth.php";
-require_once "controller/Middleware/Guest.php";
-require_once "controller/Middleware/Middleware.php";
+require 'vendor/autoload.php';
+
+use middle\Middleware;
 
 class Router{
 
@@ -58,7 +58,6 @@ class Router{
             if($route['url']==$url && $route['method'] == strtoupper($method)){
 
                 //middleware 
-
                 Middleware::resolve($route['middleware']);
 
                 require $route['controller'];
