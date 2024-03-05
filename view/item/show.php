@@ -2,7 +2,6 @@
 //session_start();
 require_once "controller/item/ishow.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,50 +62,38 @@ require_once "controller/item/ishow.php";
                     </div>
                     <div class="current-price-p">
                         <div class="stroke"></div>
-                        <p class="card-text card-text-2">Your bid:<span class="current-price current-bid">$<?php  isset($_SESSION['bid']) ? $_SESSION['bid'] : '0'; ?></span></p>
+
+                        <?php
+                            // Initialize the bid amount variable
+                        $bidAmount = isset($_SESSION['bid']) ? $_SESSION['bid'] : 0;
+                        ?>
+                        <p class="card-text card-text-2">Your bid:<span class="current-price current-bid">$<?php echo $bidAmount; ?></span></p>
+  
                         <p class="card-text">Last bid: <span class="current-price last-bid"><?php echo $data['item_price']?></span></p>
                     </div>
                     <p class="card-text-last card-text-1">Ends in: <span
                             class="closing-time">2023-04-11T08:00:00Z</span></p>
                     
                             <div class="card-bid">
-                           <div class="bid-container">
+                           <div class="container">
                                 <input type="number" class="bid-input" placeholder="Offer a price" name="bid">
                                 <button onclick="bid(this.closest('.auction-card'))">Bid now</button>
                            </div>
 
                            <form method="post" action="/controller/item/payment.php">
-                            <input type=hidden value="<?php echo isset($_SESSION['bidd']) ?>" name='bidd'>
+                            <input type=hidden value="<?php echo isset($_SESSION['bid']) ?>" name='bidd'>
                             <button type="submit" name='pay'>Pay</button>
                            </form>
                         </div>
                         
                     <p class="card-text-last card-text">Ends in:<span id="timer" class="countdown-timer"></span></p>
-                    <form method="post" action="/controller/item/delete.php" ">
-                    <input type="hidden" name="_method" value="DELETE">
-                    <input type="hidden" name="item_name" value="<?= $data["item_name"] ?>">
-                    <button class="delete-button">Delete</button>
-                    </form>
-
-                    <!-- <a href="update item?item_name=<?= $data["item_name"] ?> " class="card-text"><button class="edit-button">Edit</button></a> -->
-
-                    <form method="get" action="update item" class="edit-button">
-                    <!-- <input type="hidden" name="_method" value="PUT"> -->
-                    <input type="hidden" name="item_name" value="<?php echo $data["item_name"] ; ?>">
-                    <input type="hidden" name="user_id" value="<?php echo $data["user_id"]; ?>">
-                    <button class="edit-button">edit</button>
-                    </form>
-              <!--<a href="iupdate.php?item_name=<?= $data["item_name"] ?>">Edit</a>--> 
                 </div>
-                
             </div>
         </div>
-        
     </section>
 </script>
     <script src="/js/script.js"></script>
     <script src="/js/bid.js"></script>
     <script src="/js/like-counter.js"></script>
-
 </body>
 </html>

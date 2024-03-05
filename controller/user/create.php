@@ -45,4 +45,4 @@ if ($status_code !== 200) {
 
 $_SESSION['data']=$data['name'];
 
-header("Location: ../../create?name=". urlencode($data['name']));
+header("Location: ../../");

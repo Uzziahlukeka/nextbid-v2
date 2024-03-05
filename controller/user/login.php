@@ -7,7 +7,7 @@ include_once '../../models/Registration.php';
 $database = new Database();
 $con = $database->connect();
 
-$user = new Registration($con);
+$user = new Registration($con,$_SESSION['data']);
 
 // Check if the user is already logged in and the last login time is within 5 minutes
 if (isset($_SESSION['last_login_time']) && time() - $_SESSION['last_login_time'] < 300) {

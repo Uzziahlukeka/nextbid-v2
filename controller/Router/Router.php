@@ -73,14 +73,8 @@ class Router{
 
         // Path based on provided $code
 
-        $viewPath = "view/{$code}.php"; 
-        if (file_exists($viewPath)) {
-
-            // Load the dynamic error view
-            
-            require $viewPath; 
-        } 
-        exit();
+     header('location: 404');
+     exit;
     } 
     
 }

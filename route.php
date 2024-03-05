@@ -26,11 +26,15 @@ $router->get('/update', 'view/user/update.php');
 $router->get('/new item', 'view/item/add_product.php');
 $router->get('/edit item', 'view/item/ioupdate.php');
 $router->get('/show item', 'view/item/Ishow.php');
+$router->get('/choice','controller/item/show.php');
+$router->get('/show iten', 'view/item/show.php');
 $router->get('/update item', 'view/item/iupdate.php');
 $router->get('/upload', 'view/item/upload.php');
 $router->get('/delete item', 'view/item/idelete.php');
 $router->get('/pay', 'view/item/pay.php');
 $router->post('/pay', 'view/item/pay.php');
 
+
 $router->get('/about', 'view/about.html');
 $router->get('/contact', 'view/contact.html');
+$router->get('/404','view/404.php');

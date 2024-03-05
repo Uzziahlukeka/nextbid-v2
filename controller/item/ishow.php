@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (isset($_SESSION['bid'])) {
     unset($_SESSION['bid']);
 }
@@ -33,20 +32,3 @@ if ($status_code !== 200) {
      $_SESSION['bid'] = $bid;
  }
  $_SESSION['item_name']=$data['item_name'];
-
- if (!isset($_SESSION['data'])) {
-    header("Location: /");
-    exit;
-    
-}
-// Check if the current user is the creator of the item
-if ($_SESSION['data'] !== $data['user_id']) {
-
-    header("Location:show iten?item_name=" . urlencode($name));
-
-    exit;
-}else{
-    header("Location:show item?item_name=" . urlencode($name));
-    exit;
-}
-

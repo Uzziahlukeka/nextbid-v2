@@ -196,7 +196,7 @@ if (empty($data['data'])) {
             <?php foreach($data['data'] as $row) { ?>
                 <div class="card auction-card">
                     <div class="auction-card-img">
-                        <a href="/show item?item_name=<?php echo $row['item_name']?>"><img src="/images/<?php echo $row['item_photo']?>" alt="Product Image" width="300" height="300" style="background-color: #d4f8f4; "></a>
+                        <a href="choice?item_name=<?php echo $row['item_name']?>"><img src="/images/<?php echo $row['item_photo']?>" alt="Product Image" width="300" height="300" style="background-color: #d4f8f4; "></a>
                     </div>
                     <div class="card-details">
                         <div class="like-icon-num">

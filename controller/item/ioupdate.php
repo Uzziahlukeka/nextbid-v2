@@ -1,10 +1,13 @@
 <?php
+session_start();
+$name=$_SESSION['data'];
 $ch = curl_init();
 $data = [
     'item_name' => filter_input(INPUT_POST, "item_name"),
     'item_photo' => filter_input(INPUT_POST, "item_photo"),
     'item_description' => filter_input(INPUT_POST, "item_description"),
-    'item_price' => filter_input(INPUT_POST, "item_price", FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION)
+    'item_price' => filter_input(INPUT_POST, "item_price", FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION),
+    'user_id'=>$name
 ];
 curl_setopt($ch, CURLOPT_URL, "http://localhost/Qwerty/nextbid-auction-website-main/api/items/update.php");
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));

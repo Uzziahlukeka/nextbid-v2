@@ -11,6 +11,7 @@ class Items{
     public $item_description;
     public $item_price;
     public $item_date;
+    public $user_id;
 
     public function __construct($db)
     {
@@ -24,7 +25,8 @@ class Items{
                 item_name=:item_name,
                 item_photo=:item_photo,
                 item_description=:item_description,
-                item_price=:item_price
+                item_price=:item_price,
+                user_id=:user_id
             ';
         //prepare statement 
         $stmt=$this->con->prepare($query);
@@ -40,6 +42,7 @@ class Items{
         $stmt->bindParam(':item_photo',$this->item_photo);
         $stmt->bindParam(':item_description',$this->item_description);
         $stmt->bindParam(':item_price',$this->item_price);
+        $stmt->bindParam(':user_id',$this->user_id);
         
 
         //execute query 
@@ -105,7 +108,7 @@ class Items{
         //create query 
         $query='DELETE FROM '.$this->table.'
         WHERE 
-        item_name=:item_name';
+        item_name=:item_name AND user_id = :user_id';
 
         //prepare statement
         $stmt=$this->con->prepare($query);
@@ -133,8 +136,9 @@ class Items{
             item_description=:item_description,
             item_price=:item_price
         WHERE 
-        item_name=:item_name
+        item_name=:item_name AND user_id = :user_id
         ';
+        
 
         //prepare statement 
         $stmt=$this->con->prepare($query);
@@ -144,12 +148,14 @@ class Items{
         $this->item_photo=htmlspecialchars(strip_tags($this->item_photo));
         $this->item_description=htmlspecialchars(strip_tags($this->item_description));
         $this->item_price=htmlspecialchars(strip_tags($this->item_price));
+        $this->user_id=htmlspecialchars(strip_tags($this->user_id));
 
         //bind data
         $stmt->bindParam(':item_name',$this->item_name);
         $stmt->bindParam(':item_photo',$this->item_photo);
         $stmt->bindParam(':item_description',$this->item_description);
         $stmt->bindParam(':item_price',$this->item_price);
+        $stmt->bindParam(':user_id',$this->user_id);
 
         //execute query 
         if($stmt->execute()){
