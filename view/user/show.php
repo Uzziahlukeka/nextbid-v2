@@ -69,7 +69,7 @@ require_once 'controller/user/show.php';
             background-color: #dc3545; /* Red */
         }
 
-        button:hover {
+        button:hover { 
             opacity: 0.8;
         }
 

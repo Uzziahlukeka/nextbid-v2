@@ -28,7 +28,7 @@
         <div id="login-form" class="form-container form-login container animate__animated">
             <h2>Login</h2>
 
-            <form id="contact-form" action="/controller/user/login.php" method="post" class="contact-form">
+            <form id="contact-form" action="/controller/user/logiin.php" method="post" class="contact-form">
                 <label class="one-label" for="email">Email*</label>
                 <input type="email" name="email" class="form-control" id="email" placeholder="example@email.com" required>
                 <label class="one-label" for="name">Password*</label>
@@ -93,8 +93,8 @@
             <p>Enter your email address associated with your account. We'll send you a link to reset your password</p>
 
             <form id="contact-form" method="post" class="contact-form" action="/controller/user/forget.php">
-                <label class="one-label" for="email">Email*</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="example@email.com">
+                <label class="one-label" for="name">Full name*</label>
+                <input type="text" name="name" class="form-control" id="email" placeholder="jhon ling">
                 <button type="submit" class="btn" name="submit">Submit</button>
                 <!-- <a href="#" type="submit" class="btn">Create account</a> -->
                 <button id="back-to-login-btn" type="button" class="btn-1" >Back to Login</button>

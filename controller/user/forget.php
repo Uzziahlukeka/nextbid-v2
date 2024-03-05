@@ -1,52 +1,57 @@
 <?php
-  // forget 
-include_once '../../config/Database.php';
-$database=new Database();
-$con=$database->connect();
-
 if (filter_has_var(INPUT_POST, "submit")) {
-    $email = filter_input(INPUT_POST, "email");
+    $name = filter_input(INPUT_POST, "name");
 
-    // Check if the email exists in the database
-    $query = "SELECT * FROM registration WHERE email = :email";
-    $stmt = $con->prepare($query);
-    $stmt->bindParam(':email', $email);
-    $stmt->execute();
+    $apiUrl = "http://localhost/Qwerty/nextbid-auction-website-main/api/user/read_single.php?name=".urlencode($name);
 
-    if ($stmt->rowCount() > 0) {
+    $ch = curl_init();
 
-        $sorti="SELECT password FROM registration WHERE email= :email";
-        $resetLink=$con->prepare($sorti);
-        $resetLink->bindParam(':email', $email);
-        $resetLink->execute();
-        $rest=$resetLink->fetchAll(PDO::FETCH_ASSOC);
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_URL => $apiUrl,
+        CURLOPT_VERBOSE => true,
+        CURLOPT_STDERR => fopen('php://stderr', 'w'),
+    ]);
 
-        //var_dump($rest);
-        if (!empty($rest)) {
-    
-        $to = $email;
-        $subject = "Password Reset";
-        $message = "your password has been sent :" .$rest[0]['password'];
-        $hearders="from : uzziah luk ";
-        // Send the email
-        $uzhh=mail($to, $subject, $message,$hearders);
-        // Display a success message to the user
-        
-        if($uzhh==true){
+    $response = curl_exec($ch);
 
-            echo "<script> alert ('password sent')</script>";
-            echo "<script>setTimeout(function(){ window.location.href = '../../homepage'; }, 100);</script>";
-            exit();
-        }
-        else{
-        echo 'sorry uzh'; 
+    $status_code = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+    curl_close($ch);
+
+    $datas = json_decode($response, true);
+
+    $to = $datas['email'];
+            $subject = "Password Reset";
+            $message = "your password has been sent :" .$datas['password'];
+            $hearders="from : uzziah luk ";
+            // Send the email
+            $uzhh=mail($to, $subject, $message,$hearders);
+            // Display a success message to the user
+            
+            if($uzhh==true){
+
+                echo "<script> alert ('password sent')</script>";
+                echo "<script>setTimeout(function(){ window.location.href = '../../homepage'; }, 100);</script>";
+                exit();
             }
+            else{
+            echo 'sorry uzh'; 
+                }
+
+
+
+
+
+        if ($status_code === 422) {
+        echo "Invalid data: ";
+        print_r($datas["errors"]);
+        exit;
         }
-    
-    } 
-    else {
-        // Email does not exist in the database
-        echo "Invalid email address.";
+
+        if ($status_code !== 200) {
+        echo "Unexpected status code: $status_code";
+        var_dump($datas);
+        exit;
         }
+
 }
-?>

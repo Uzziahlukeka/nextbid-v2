@@ -5,8 +5,8 @@
 //put pour update 
 
 $router->get('/', 'view/homepage.php')->only('guest');
-$router->get('/index.php', 'view/homepage.php');
-$router->get('/homepage', 'view/homepage.php');
+$router->get('/index.php', 'view/homepage.php')->only('guest');;
+$router->get('/homepage', 'view/homepage.php')->only('guest');;
 
 $router->get('/main', 'view/logedin.php')->only('auth');
 $router->get('/guest','view/guest.html')->only('guest');
