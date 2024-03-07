@@ -9,6 +9,14 @@ if (isset($_GET['item_name'])) {
 <head>
     <meta charset="UTF-8">
     <title>show item</title>
+    <style>
+         main {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+    </style>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css">
 </head>
 <body>

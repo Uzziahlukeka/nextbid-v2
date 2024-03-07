@@ -38,3 +38,13 @@ $router->post('/pay', 'view/item/pay.php');
 $router->get('/about', 'view/about.html');
 $router->get('/contact', 'view/contact.html');
 $router->get('/404','view/404.php');
+
+
+$router->post('/forget','controller/user/forget.php');
+$router->post('/sign','controller/user/create.php');
+$router->post('/login','controller/user/logiin.php');
+
+
+$router->post('/add item','controller/item/upload.php');
+$router->put('/update item','');
+

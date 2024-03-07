@@ -44,7 +44,7 @@
 
     <div class="product-form">
         <h3>Add Your Item</h3>
-        <form class="product-container" method="post" action="/controller/item/upload.php" enctype="multipart/form-data">
+        <form class="product-container" method="post" action="add item" enctype="multipart/form-data">
             <label class="one-label" for="item-name">Title/Name*</label>
             <input class="form-control-1" type="text" id="item-name" name="item-name" placeholder="Item name" required>
 
