@@ -65,6 +65,52 @@ adding item part
 contact part
 ![image](https://github.com/Uzziahlukeka/MVC-and-Rest-try/assets/102746022/6876526c-4b9d-4d2e-b2ec-5c522fa00fa4)
 
+Realisation: 
+Online Auction System
+Technology: PHP, JS/Database
+
+Project Objective:
+Developed a distributed online auction system utilizing a REST API for communication between system components, adhering strictly to the MVC model.
+
+Key Responsibilities:
+
+REST API Development:
+
+Designed and implemented a RESTful API from scratch to manage users and auctions.
+Created endpoints for adding, editing, deleting, and retrieving user information.
+Developed endpoints for auction management, including adding, editing, removing, and retrieving auction items.
+Data Persistence:
+
+Implemented data storage using databases to ensure data integrity and reliability.
+Payment Integration:
+
+Integrated a sandbox payment operator to handle secure transactions for auctioned items.
+User Interface Creation:
+
+Developed a user-friendly interface for conducting auctions, enabling seamless interaction with the back-end API.
+Skills and Knowledge Gained:
+
+REST API Design and Implementation:
+
+Gained a deep understanding of REST principles such as statelessness, client-server architecture, and resource representation.
+MVC Architecture:
+
+Enhanced ability to separate concerns within the application, leading to better code organization and scalability.
+Distributed System Design:
+
+Learned to design and manage a distributed system where components interact through APIs.
+User and Auction Management:
+
+Acquired practical experience in implementing CRUD operations and handling complex business logic.
+Secure Payment Processing:
+
+Gained experience in integrating and managing secure financial transactions.
+Full-Stack Development:
+
+Developed a comprehensive understanding of both back-end and front-end development.
+Technologies Used:
+PHP, JS, Database, REST API, MVC, Payment Integration (paypal)
+
 
 
 
