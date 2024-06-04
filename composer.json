@@ -1,5 +1,5 @@
 {
-    "name": "acer/nextbid-auction-website-main",
+    "name": "acer/nextbid-v2",
     "autoload": {
         "psr-4": {
             "middle\\": "controller/Middleware"
