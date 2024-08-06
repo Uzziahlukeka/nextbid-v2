@@ -1,4 +1,4 @@
-# MVC-and-Rest-try
+# MVC-and-Rest
 
 after building a rest and a mvc i decided to combine those two here down find the description 
 these are exercises and way of understanding concept 
